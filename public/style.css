@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;   
+    justify-content: center; 
+    gap: 40px;
+}
+
+header{
+    height: 20%;
+    background-color: violet;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.products article{
+    width: 300px;
+    text-align: center;
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 13px;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+ul li{
+    padding: 10px;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card button{
+    padding: 8px 20px;
+}
