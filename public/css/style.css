@@ -18,3 +18,10 @@ img{
     border: none;
     margin: 20px auto;
 }
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 52px 0px;
+}

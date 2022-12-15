@@ -44,6 +44,12 @@ class Controller extends BaseController
     }
 
     public function signup(){
-        
+        return view('signup');
     }
+
+    public function register(Request $request)
+    {
+        User::create($request->all());
+        session()->put('email',$request->get('email'));
+        return Redirect::to('/products');    }
 }

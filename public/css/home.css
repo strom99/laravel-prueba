@@ -8,17 +8,37 @@
 
 header{
     height: 20%;
-    background-color: violet;
-    padding: 10px;
+    background-color: #710671;
     margin-bottom: 40px;
 }
 
 
-header div{
+header > div{
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+#searchInput{
+    background:none;
+    border: none;
+    margin-left: 10px;
+}
+
+#searchInput::placeholder{
+    color: white;
+}
+
+.menu{
+    color: violet;
+    padding: 10px;
+}
+
+.menu li:hover{
+    color: rgb(48, 168, 242);
 }
 
 .products article{

@@ -8,10 +8,15 @@
 @section('content')
     <header>
         <div>
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <div>
+                <label for="">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+                <input id="searchInput" type="text" placeholder="Search any argument">
+            </div>
             <span>{{ Session::get('email') }}</span>
         </div>
-        <ul>
+        <ul class="menu">
             <li>Home</li>
             <li>Collection</li>
         </ul>

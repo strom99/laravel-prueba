@@ -8,19 +8,12 @@
 }
 
 .container > div{
-    width: 70%;
+    width: 450px;
     height: 60%;
     background-color: #ecdcfa54;
     box-sizing: border-box;
     padding: 30px;
     border-radius: 10px;
-}
-
-.formLogin{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 52px 0px;
 }
 
 .titleForm{

@@ -19,4 +19,5 @@ Route::get('/', [Controller::class, 'login']);
 Route::post('/login', [Controller::class, 'sesionlogin']);
 Route::get('/products', [ProductoController::class,'show']);
 Route::get('/signup', [Controller::class,'signup']);
+Route::post('/register', [Controller::class,'register']);
 Route::get('/forgot', [Controller::class,'forgot']);
