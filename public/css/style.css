@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.btnGeneral{
+    background-color: #710671;
+    color: white;
+    padding: 10px;
+    width: 282px;
+    border-radius: 8px;
+    border: none;
+    margin: 20px auto;
+}

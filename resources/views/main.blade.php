@@ -1,5 +1,10 @@
 @extends('layout')
 
+@section('css')
+    <link rel="stylesheet" href="css/home.css">
+@endsection
+
+
 @section('content')
     <header>
         <div>
