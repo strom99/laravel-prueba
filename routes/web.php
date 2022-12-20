@@ -15,9 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [Controller::class, 'login']);
+Route::get('/', [Controller::class, 'login'])->name('login');
 Route::post('/login', [Controller::class, 'sesionlogin']);
-Route::get('/products', [ProductoController::class,'show']);
-Route::get('/signup', [Controller::class,'signup']);
-Route::post('/register', [Controller::class,'register']);
-Route::get('/forgot', [Controller::class,'forgot']);
+Route::get('/products', [ProductoController::class, 'show'])->name('products');
+Route::get('/signup', [Controller::class, 'signup'])->name('registro');
+Route::post('/register', [Controller::class, 'register']);
+Route::get('/forgot', [Controller::class, 'forgot'])->name('forgot');
+Route::get('/logout', [Controller::class, 'logout']);
+
+Route::get('/profile', [Controller::class, 'profile']);

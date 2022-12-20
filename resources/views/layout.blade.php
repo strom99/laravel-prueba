@@ -13,6 +13,15 @@
     <script src="https://kit.fontawesome.com/6f213ce53f.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    @php 
+        $allowedRoutes = ['login', 'registro', 'forgot'];
+    @endphp
+
+    @includeWhen(!Route::is($allowedRoutes), 'component.header')
+
     @yield('content')
+    @yield('js')
+
+    @includeWhen(!Route::is($allowedRoutes), 'component.footer')
 </body>
 </html>

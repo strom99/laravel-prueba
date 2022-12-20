@@ -3,10 +3,31 @@
     padding: 0;
 }
 
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #fbfbfb;
+}
 
 img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
+}
+
+header, footer{
+    background-color: #710671;
+}
+
+header{
+    height: 15%;
+}
+
+
+a{
+    text-decoration: none;
+    color: violet;
 }
 
 .btnGeneral{
@@ -20,8 +41,71 @@ img{
 }
 
 .form{
-    display: flex;
     flex-direction: column;
     gap: 10px;
     margin: 52px 0px;
+}
+
+footer{
+    height: 115px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+footer > div{
+    font-size: 10px;
+    flex: 1;
+    color: rgb(207, 207, 207);
+    align-items: end;
+    gap: 10px;
+}
+
+footer ul{
+    color: white;
+    font-size: 12px;
+    gap: 10px;
+    margin: 20px;
+}
+
+footer ul li{
+    padding-right: 10px;
+    border-right: 1px solid white;
+}
+
+footer ul li:last-child{
+    border: none;
+}
+
+.appDown, footer > div, footer, .form, .appDown > div{
+    display: flex;
+}
+
+.appDown{
+    gap: 8px;
+    align-items: center;
+    border-radius: 25px;
+    border: 1px solid;
+    padding: 6px 13px;
+}
+
+.appDown .fa-google-play{
+    font-size: 20px;
+}
+
+.appDown .fa-apple{
+    font-size: 26px;
+}
+
+
+.appDown > div{
+    flex-direction: column;
+}
+
+.btn{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    margin: 25px 0px;
 }

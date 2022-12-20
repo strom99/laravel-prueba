@@ -3,15 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Exception;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Validation\ValidationException;
 
 class Controller extends BaseController
 {
@@ -22,6 +25,7 @@ class Controller extends BaseController
         return view('login');
     }
 
+    // verificacion sesion usuario
     public function sesionlogin(Request $request)
     {
         $email = $request->get('email');
@@ -30,7 +34,6 @@ class Controller extends BaseController
         $user = User::where('email', $email)->first();
 
         if ($user && Hash::check($pass, $user->password)) {
-            session()->put('email',$email);
             return Redirect::to('/products');
         } else {
             return redirect()->back()->withErrors([
@@ -39,17 +42,40 @@ class Controller extends BaseController
         }
     }
 
-    public function forgot(){
-
+    public function forgot()
+    {
+        return view('forgot');
     }
 
-    public function signup(){
+    public function signup()
+    {
         return view('signup');
+    }
+
+    public function profile(User $user)
+    {
+        return view('profile');
     }
 
     public function register(Request $request)
     {
-        User::create($request->all());
-        session()->put('email',$request->get('email'));
-        return Redirect::to('/products');    }
+            $this->validate($request, [
+                'name' => 'required',
+                'phone' => 'required',
+                'email' => 'required|email',
+                'password' => 'required'
+            ]);
+            $user = User::create($request->all());
+
+            //
+            $user = auth()->login($user);
+
+            return Redirect::to('/products');
+
+    }
+
+    public function logout(){
+        Auth::logout();
+        return Redirect::to('/');
+    }
 }

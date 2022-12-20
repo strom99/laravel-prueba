@@ -1,26 +1,30 @@
 
 .products{
     display: flex;
+    padding: 50px 0px;
     flex-wrap: wrap;   
     justify-content: center; 
-    gap: 40px;
+    gap: 25px;
 }
 
-header{
-    height: 20%;
-    background-color: #710671;
-    margin-bottom: 40px;
+i{
+    padding: 0px 4px;
 }
-
 
 header > div{
-    padding: 15px;
-    display: flex;
+    padding: 20px;
     justify-content: space-between;
     align-items: center;
-    color: white;
     border-bottom: 1px solid white;
 }
+
+header div, .item{
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+
 
 #searchInput{
     background:none;
@@ -33,37 +37,105 @@ header > div{
 }
 
 .menu{
+    flex-wrap: wrap;
     color: violet;
+    padding: 10px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu li{
     padding: 10px;
 }
 
-.menu li:hover{
+.items li{
+    margin-right: 12px;
+}
+
+.menu li a:hover{
     color: rgb(48, 168, 242);
+    filter: drop-shadow(0px 0px 4px white);
 }
 
 .products article{
-    width: 300px;
+    display: grid;
+    height: 295px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 24px 40px 10px 40px 1fr;
+    width: 255px;
     text-align: center;
     border: 1px solid lightgray;
-    padding: 10px;
     border-radius: 13px;
 }
 
+.products article a{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 7;
+}
 ul{
     display: flex;
     list-style: none;
-    gap: 20px;
+    text-decoration: none;
 }
 
-ul li{
-    padding: 10px;
+
+.precioProduct{
+    background-color: violet;
+    grid-column-start: 1;
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
 
-.card{
-    display: flex;
-    justify-content: space-between;
+.nombreProduct{
+    background-color: #39b8df;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.propProduct{
+    color: white;
+    display: grid;
     align-items: center;
+    border-radius: 0px 15px 15px 0px;
 }
+
 .card button{
     padding: 8px 20px;
+}
+
+.btnFilter{
+    border: none;
+    background-color: #39b8df;
+    padding: 20px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10%;
+    right: 38px;
+}
+
+.btnFilter:hover{
+    background-color: #2cceff;
+}
+
+.btnFilter i{
+    font-size: 20px;
+    color: white;
+}
+
+/* Diseño de ventana filtros */
+.containFilters{
+    bottom: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    right: 50%;
+    width: 300px;
+    height: auto;
+    background-color: violet;
+    padding: 20px;
+    display: flex;
 }

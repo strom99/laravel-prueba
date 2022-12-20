@@ -8,7 +8,7 @@
 @section('content')
     <div class="container">
         <div>
-            <h3 class="titleForm">Login</h3>
+            <h3 class="titleForm">Login </h3>
             <form action="/login" method="POST" class="form">
                 @csrf
                 <input type="text" placeholder="email" name="email">
@@ -18,7 +18,7 @@
                     <p style="color: red">{{ $errors->first() }}</p>
                 @endif
             </form>
-            <a href="href=/forgot/">Forgot password</a>
+            <a href="forgot">Forgot password</a>
             <a href="signup">Register</a>
         </div>
     </div>
