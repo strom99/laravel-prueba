@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->enum('type',['delivery','normal'])->default('normal');
+            $table->enum('type',['delivery','normal']);
             $table->string('img')->default('/jersey.jpg');
             $table->integer('precio');
             $table->timestamps();
