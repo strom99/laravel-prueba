@@ -45,9 +45,9 @@
         <div>
             <span class="titleSel">Price</span>
             <div class="inputRange">
-                <div class="lineRange"></div>
-                <input id="priceInput1" type="range" value="100" min="0" max="500" >
-                <input id="priceInput2" type="range" value="400" min="0" max="500">
+                <div id="lineRange" class="lineRange"></div>
+                <input id="priceInput1" type="range" value="100" min="0" max="500" oninput="slide1()">
+                <input id="priceInput2" type="range" value="400" min="0" max="500" oninput="slide2()">
             </div>
             <div class="valuesBox">
                 <span id="valuePriceInput1">35</span>
