@@ -23,7 +23,7 @@
                     <li>
                         <a href="profile" class="item">
                             <i class="fa-solid fa-user"></i>
-                            <span>{{ auth()->user()->name}}</span>
+                            <span>{{ auth()->user()->name }}</span>
                         </a>
                     </li>
                 </ul>

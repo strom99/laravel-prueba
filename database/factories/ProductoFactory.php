@@ -16,8 +16,13 @@ class ProductoFactory extends Factory
      */
     public function definition()
     {
+        // package fakerphp-picsum-images
+        $faker = \Faker\Factory::create();
+        $faker->addProvider(new \Smknstd\FakerPicsumImages\FakerPicsumImagesProvider($faker));
+        
         return [
             'name' => fake()->name(),
+            'img' => $faker->imageUrl('500', '500'),
             'precio' => fake()->numberBetween(20,233)
         ];
     }

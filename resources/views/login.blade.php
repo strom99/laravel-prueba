@@ -11,8 +11,8 @@
             <h3 class="titleForm">Login </h3>
             <form action="/login" method="POST" class="form">
                 @csrf
-                <input type="text" placeholder="email" name="email">
-                <input type="text" placeholder="password" name="password">
+                <input type="text" placeholder="email" name="email" value="{{ old('email') }}">
+                <input type="text" placeholder="password" name="password" value="{{ old('password') }}">
                 <button class="btnGeneral" type="submit">Login</button>
                 @if ($errors->any())
                     <p style="color: red">{{ $errors->first() }}</p>

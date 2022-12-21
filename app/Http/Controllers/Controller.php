@@ -34,6 +34,8 @@ class Controller extends BaseController
         $user = User::where('email', $email)->first();
 
         if ($user && Hash::check($pass, $user->password)) {
+            auth()->login($user);
+
             return Redirect::to('/products');
         } else {
             return redirect()->back()->withErrors([

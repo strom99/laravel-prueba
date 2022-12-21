@@ -128,14 +128,20 @@ ul{
 
 /* Diseño de ventana filtros */
 .containFilters{
-    bottom: 50%;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    right: 50%;
-    width: 300px;
-    height: auto;
-    background-color: violet;
+    background-color: #e3b6e3a1;
     padding: 20px;
     display: flex;
+    height: 100%;
+    z-index: 10;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.div-filters{
+    background-color: #e3b6e3;
+    width: auto;
+    height: max-content;
+    padding: 26px;
+    border-radius: 10px;
 }

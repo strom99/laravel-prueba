@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->enum('type',['delivery','normal']);
-            $table->string('img')->default('/jersey.jpg');
+            $table->string('img');
             $table->integer('precio');
             $table->timestamps();
         });
