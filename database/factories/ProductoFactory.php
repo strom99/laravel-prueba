@@ -23,7 +23,8 @@ class ProductoFactory extends Factory
         return [
             'name' => fake()->name(),
             'img' => $faker->imageUrl('500', '500'),
-            'precio' => fake()->numberBetween(20,233)
+            'price' => fake()->numberBetween(20,500),
+            'size' => fake()->numberBetween(80,148)
         ];
     }
 }

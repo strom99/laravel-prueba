@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('name');
             $table->enum('type',['delivery','normal']);
             $table->string('img');
-            $table->integer('precio');
+            $table->integer('price');
+            $table->integer('size');
             $table->timestamps();
         });
     }
