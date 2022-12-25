@@ -22,7 +22,7 @@ header, footer{
 }
 
 header{
-    height: 15%;
+    height: 20%;
 }
 
 
@@ -109,4 +109,11 @@ footer ul li:last-child{
     background-color: red;
     color: white;
     margin: 25px 0px;
+    display: flex;
+    width: max-content;
+
+}
+
+.hidden{
+    display: none !important;
 }

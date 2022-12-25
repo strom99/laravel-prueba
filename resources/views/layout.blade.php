@@ -14,7 +14,7 @@
 </head>
 <body>
     @php 
-        $allowedRoutes = ['login', 'registro', 'forgot'];
+        $allowedRoutes = ['login', 'registro', 'forgot','requestEmail', 'password.reset'];
     @endphp
 
     @includeWhen(!Route::is($allowedRoutes), 'component.header')

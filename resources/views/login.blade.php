@@ -18,7 +18,10 @@
                     <p style="color: red">{{ $errors->first() }}</p>
                 @endif
             </form>
-            <a href="forgot">Forgot password</a>
+            @if (Session::has('status'))
+                <p style="color: green">{{ Session::get('status') }}</p>
+            @endif;
+            <a href="requestEmail">Forgot password</a>
             <a href="signup">Register</a>
         </div>
     </div>

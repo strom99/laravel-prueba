@@ -40,7 +40,6 @@ header div, .item{
     flex-wrap: wrap;
     color: violet;
     padding: 10px;
-    gap: 20px;
     justify-content: center;
 }
 
@@ -278,7 +277,6 @@ input[type="range"]:active::-webkit-slider-thumb{
 }
 
 .valuesBox{
-    background-color: white;
     display: flex;
     justify-content: center;
     gap: 25px;
@@ -286,5 +284,6 @@ input[type="range"]:active::-webkit-slider-thumb{
     padding: 5px;
     margin: auto;
     color: #2accca;
+    font-weight: 700;
 
 }

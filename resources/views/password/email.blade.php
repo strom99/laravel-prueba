@@ -8,15 +8,18 @@
     <div class="container">
         <div>
             <h3 class="titleForm">Recover password</h3>
-            <form action="/recover" method="POST" class="form">
+            <form action="/forgot-password" method="POST" class="form">
                 @csrf
                 <span>Enter your email registered with your account</span>
-                <input type="email" name="email" id="">
+                <input type="email" name="email" id="" value="{{ old('email') }}">
                 <button class="btnGeneral" type="submit">Apply</button>
-                @if ($errors->any())
-                    <p style="color: red">{{ $errors->first() }}</p>
-                @endif
             </form>
+            @if (Session::has('status'))
+                <p style="color: green">{{ Session::get('status') }}</p>
+            @endif
+            @error('email')
+                <p style="color: red">{{ $message }}</p>
+            @enderror 
             <a href="/">Login</a>
         </div>
     </div>

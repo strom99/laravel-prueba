@@ -1,4 +1,4 @@
-<div class="containFilters">
+<div class="containFilters hidden">
    <div class="div-filters">
     <form action="" class="flex-com formFilters">
         <div class="flex-com categorySel">
@@ -56,8 +56,8 @@
             </div>
         </div>
         <div>
-            <button>Close</button>
-            <button>Apply filters</button>
+            <button class="btn" id="closeFilter">Close</button>
+            <button class="btnGeneral">Apply filters</button>
         </div>
        </form>
    </div>

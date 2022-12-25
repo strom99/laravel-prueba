@@ -6,7 +6,7 @@
 
 
 @section('content')
-    <div>
+    <div class="divMain">
         <div class="products">
             @foreach ($productos as $producto)
             <article>

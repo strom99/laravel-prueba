@@ -44,11 +44,6 @@ class Controller extends BaseController
         }
     }
 
-    public function forgot()
-    {
-        return view('forgot');
-    }
-
     public function signup()
     {
         return view('signup');
