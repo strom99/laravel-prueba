@@ -31,7 +31,7 @@ Route::get('/requestEmail', [UserController::class, 'requestEmail'])->name('requ
 Route::get('/logout', [Controller::class, 'logout']);
 
 Route::get('/profile', [Controller::class, 'profile']);
-//Route::get('/password/request', [UserController::class, 'requestPasdword']);
+
 Route::post('/forgot-password', function (Request $request) {
     $request->validate(['email' => 'required|email']);
 
